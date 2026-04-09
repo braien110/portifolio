@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+:root {
+  --fonte: "Roboto Slab", serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte);
+  min-height: 100vh;
+}
+
+header {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 70px;
+}
+
+nav {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.contato {
+  position: relative;
+  min-width: 200px;
+}
+
+.btn-menu {
+  border: 2px solid rgb(114, 114, 114);
+  padding: 10px 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-menu:hover {
+  border: 2px solid white;
+}
+
+.menu-movel {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-contato {
+  text-decoration: none;
+  color: rgb(114, 114, 114);
+  transition: 0.3s;
+}
+
+.btn-contato:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.links {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.7s;
+}
+
+.btn-links {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-family: var(--fonte);
+  transition: transform 0.3s ease;
+}
+.btn-links:hover {
+  transform: scale(1.3);
+}
+
+.btn-links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  width: 100%;
+  height: 3px;
+  background: white;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.btn-links:hover::after {
+  transform: scaleX(1);
+}
